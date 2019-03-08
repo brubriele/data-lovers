@@ -29,6 +29,11 @@ h1, h2 {
     left: 27%;
 }
 
+h4 {
+    font-size: 20px;
+    font-weight: 200;
+}
+
 .ball-left, .ball-right, .ball-topic {
     position: relative;
     width: 360px;
@@ -111,7 +116,7 @@ h1, h2 {
       }
   
 
-.menu, .btn-violence, .btn-education, .btn-population, .country * {
+.menu {
     background-color: #FC9453;
     border: none;
     color: white;
@@ -134,15 +139,17 @@ h1, h2 {
     border-radius: 145px;
     width: 210px;
     height: 235px;
+    text-decoration: none;
   }
 
   .menu:hover {
     background-color: rgb(224, 189, 167);
   }
 
-  aside. .text-topic {
-      display: flex;
-      flex-direction: column;
+  aside, .text-topic {
+    display: flex;
+    flex-direction: column;
+    margin-right: 35px;
   }
 
 
@@ -252,7 +259,7 @@ nav {
         grid-row: 1 / span 2;
         grid-column: 1 / span 1;
       }
-      .dashboard-card {
+      .dashboard-card, .btn-education, .btn-violence, .btn-population {
         background: white;
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
         padding: 2px;
@@ -265,6 +272,37 @@ nav {
         opacity: 0.7;
         border-radius: 2px;
       }
+
+      .topic-btn, .btn-education, .btn-violence, .btn-population  {
+          display: flex;
+          color: #242A36;
+          justify-content: center;
+          font-weight: 900;
+          margin: 25px;
+          
+      }
+
+      .btn-education:hover, .btn-violence:hover, .btn-population:hover {
+        background: rgb(255, 255, 255);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+      }
+
+      .topic-selection {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .section-text, .section-title {
+          text-align: center;
+      }
+
+
+      span {
+          font-weight: 100; 
+      }
+
 
     
 

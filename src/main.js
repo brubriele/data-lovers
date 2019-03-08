@@ -1,3 +1,9 @@
+window.onload = function(){
+  listeners()
+}
+
+function listeners(){
+  
 document.getElementById('btn-topic-educa').addEventListener('click', () => {
   showIndicadoresEduca();
   printValue()
@@ -13,27 +19,18 @@ document.getElementById('btn-topic-pop').addEventListener('click', () => {
   printValue()
 })
 
-
+}
 
 function printValue() {
 
   let valor = document.getElementById("formIndic").indicator.value;
   let basePeru = WORLDBANK.PER.indicators
   let baseBrasil = WORLDBANK.BRA.indicators
-  let filtrado = WORLDBANK.BRA.indicators
   let selecionadoPeru = [indexIndicator(basePeru, 'indicatorName', valor)]
   let selecionadoBrasil = [indexIndicator(baseBrasil, 'indicatorName', valor)]
-
   let escolhaPeru = WORLDBANK.PER.indicators[selecionadoPeru]
   let escolhaBrasil = WORLDBANK.BRA.indicators[selecionadoBrasil]
-
-
-
-
   // console.log(base[escolha])
-
-
-
   //  console.log(typeof escolhaPeru)
 
 
@@ -44,16 +41,8 @@ function printValue() {
   document.getElementById('indicators-div-brasil').innerHTML = newStringBrasil
 
   // descobrir como se livrar do maldito undefined
-
-
-
-
-
   elements = document.getElementById("btnEscolha");
-  elements.addEventListener('click', printValue)
-
-
-
+  elements.addEventListener('click', printValue);
 
   function indexIndicator(array, attr, value) {
     for (var i = 0; i < array.length; i++) {
@@ -63,23 +52,7 @@ function printValue() {
     }
   }
 
-
-
-
-  //   function showIndicadores(){
-  //   let productDiv = document.getElementById('indicators-div');
-  //   productDiv.innerHTML = `
-  //   ${getData().map((indicador) => `
-  //     <div class="product-item">
-  //       <p>${indicador["indicators"][escolha]["indicatorName"]}</p>
-  //       <p>${indicador["indicators"][escolha]["countryName"]}</p>
-  //       <p>${indicador["indicators"][escolha].data[2013]}</p>
-  //       <p>${indicador["indicators"][escolha].data[2014]}</p>
-  //       <p>${indicador["indicators"][escolha].data[2015]}</p>
-  //     </div>`).join('')}`
-  // }
 }
-
 
 function showIndicadoresEduca() {
   let indicaDiv = document.getElementById('indicator-selection');
