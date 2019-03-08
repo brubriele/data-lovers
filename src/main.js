@@ -6,7 +6,9 @@ function listeners(){
   
 document.getElementById('btn-topic-educa').addEventListener('click', () => {
   showIndicadoresEduca();
-  printValue()
+  elements = document.getElementById("btnEscolha");
+  elements.addEventListener('click', printValue);
+  // printValue()
 })
 
 document.getElementById('btn-topic-viol').addEventListener('click', () => {
@@ -17,25 +19,32 @@ document.getElementById('btn-topic-viol').addEventListener('click', () => {
 document.getElementById('btn-topic-pop').addEventListener('click', () => {
   showIndicadoresPop();
   printValue()
+  // doPais("BRA")
 })
 
 }
+
+// function doPais(pais) {
+//   WORLDBANK[pais]
+// }
 
 function printValue() {
 
   let valor = document.getElementById("formIndic").indicator.value;
   let basePeru = WORLDBANK.PER.indicators
   let baseBrasil = WORLDBANK.BRA.indicators
-  let selecionadoPeru = [indexIndicator(basePeru, 'indicatorName', valor)]
-  let selecionadoBrasil = [indexIndicator(baseBrasil, 'indicatorName', valor)]
+  let selecionadoPeru = indexIndicator(basePeru, 'indicatorName', valor)
+  let selecionadoBrasil = indexIndicator(baseBrasil, 'indicatorName', valor)
   let escolhaPeru = WORLDBANK.PER.indicators[selecionadoPeru]
   let escolhaBrasil = WORLDBANK.BRA.indicators[selecionadoBrasil]
+  console.log(selecionadoPeru);
+  console.log(escolhaPeru.data["2005"])
   // console.log(base[escolha])
   //  console.log(typeof escolhaPeru)
 
 
   let newStringPeru = JSON.stringify(escolhaPeru, null, 2)
-  document.getElementById('indicators-div-peru').innerHTML = newStringPeru
+  document.getElementById('indicators-div-peru').innerHTML = escolhaPeru.data["2005"]
 
   let newStringBrasil = JSON.stringify(escolhaBrasil, null, 2)
   document.getElementById('indicators-div-brasil').innerHTML = newStringBrasil
