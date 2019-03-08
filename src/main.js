@@ -155,7 +155,6 @@ fugiat consequuntur perferendis explicabo, amet ipsa ex dolor vitae sed quasi to
 }
 
 
-// clicou brasil
 function indexIndicator(array, attr, value) {
   for (var i = 0; i < array.length; i++) {
     if (array[i][attr] === value) {
@@ -178,8 +177,6 @@ function getEducaBra() {
   indexIndicator(arrayIndicaBra, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación terciaria (%)')
 
 }
-
-console.log(getEducaBra())
 
 function getEducaChl() {
   indexIndicator(arrayIndicaChi, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)')
@@ -221,33 +218,118 @@ console.log(educaBraUm, educaBraDois, educaBraTres)
 
 
 function cliqueBrasil() {
-  return WORLDBANK.BRA['indicators'][74].data[2013]  
+  return WORLDBANK.BRA['indicators']  
 }
 
 
 
-console.log(WORLDBANK.BRA['indicators'][74])
+// console.log(WORLDBANK.BRA['indicators'][74])
 
 
 
+// document.getElementById("btnEscolha").addEventListener('click', funcaozinha)
 
-elements = document.getElementsByTagName("input");
-for(let el of elements) {
-  console.log("x");
-  el.addEventListener('click', printValue)
+// function funcaozinha(e){
+//   let listaRadios = document.getElementsByTagName('input')
+//   for (radio of listaRadios){
+//     if (radio.getAttribute('type')==='radio'){
+//       console.log('foi')
+      
+//     }  
+//   }
+// }
+
+
+// if(document.getElementById("c").checked==false && document.getElementById("i").checked==false && document.getElementById("l").checked==false) {
+// 	alert( "Preencha o campo LOCALIZAÇÃO corretamente." );
+// 	return false;
+// }
+
+
+
+// function printValue() {
+//   valor = document.getElementById("formEduca").indicator.value;
+//   document.getElementById('escolha').innerHTML = valor;
+// }
+
+// function getContent() {
+//   return document.getElementById("escolha").innerHTML;
+// }
+
+//   // return WORLDBANK["BRA"]["indicators"][num]["data"][2015]
+
+
+// const verData = WORLDBANK["BRA"]["indicators"][72]['indicatorName']
+
+// console.log(verData)
+window.onload = function(){
+  printValue();
 }
 
-function printValue(event) {
-  valor = document.getElementById("formEduca").indicator.value;
-  document.getElementById('escolha').innerHTML = valor;
-  return valor
+function printValue() {
+
+    let valor = document.getElementById("formEduca").indicator.value;
+    let basePeru = WORLDBANK.PER.indicators
+    let baseBrasil = WORLDBANK.BRA.indicators
+    let filtrado = WORLDBANK.BRA.indicators
+    let selecionadoPeru = [indexIndicator(basePeru, 'indicatorName', valor)]
+    let selecionadoBrasil = [indexIndicator(baseBrasil, 'indicatorName', valor)]
+
+    let escolhaPeru = WORLDBANK.PER.indicators[selecionadoPeru]
+     let escolhaBrasil = WORLDBANK.BRA.indicators[selecionadoBrasil]
+
+     
+
+
+    // console.log(base[escolha])
+
+
+
+      //  console.log(typeof escolhaPeru)
+
+
+      let newStringPeru = JSON.stringify(escolhaPeru, null, 2)
+        document.getElementById('indicators-div-peru').innerHTML = newStringPeru
+
+      let newStringBrasil = JSON.stringify(escolhaBrasil, null, 2)
+      document.getElementById('indicators-div-brasil').innerHTML = newStringBrasil
+
+      // descobrir como se livrar do maldito undefined
+      
+
+    
+
+  
+  elements = document.getElementById("btnEscolha");
+  elements.addEventListener('click', printValue)
+  
+
+
+
+ function indexIndicator(array, attr, value) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i][attr] === value) {
+      return i;
+    }
+  }
 }
 
-function getContent() {
-  return document.getElementById("escolha").innerHTML;
+
+
+
+//   function showIndicadores(){
+//   let productDiv = document.getElementById('indicators-div');
+//   productDiv.innerHTML = `
+//   ${getData().map((indicador) => `
+//     <div class="product-item">
+//       <p>${indicador["indicators"][escolha]["indicatorName"]}</p>
+//       <p>${indicador["indicators"][escolha]["countryName"]}</p>
+//       <p>${indicador["indicators"][escolha].data[2013]}</p>
+//       <p>${indicador["indicators"][escolha].data[2014]}</p>
+//       <p>${indicador["indicators"][escolha].data[2015]}</p>
+//     </div>`).join('')}`
+// }
 }
 
-console.log()
-const verData = WORLDBANK["BRA"]["indicators"][74]["data"][2015]
 
 
