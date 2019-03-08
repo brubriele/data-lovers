@@ -3,6 +3,11 @@ document.getElementById('btn-topic-educa').addEventListener('click', () => {
   printValue()
 })
 
+document.getElementById('btn-topic-viol').addEventListener('click', () => {
+  showIndicadoresViol();
+  printValue()
+})
+
 function printValue() {
 
   let valor = document.getElementById("formEduca").indicator.value;
@@ -119,7 +124,7 @@ function showIndicadoresEduca() {
 `
 }
 
-function showIndicadoresEduca() {
+function showIndicadoresViol() {
   let indicaDiv = document.getElementById('indicator-selection');
   indicaDiv.innerHTML = `
   <div class="box-select">
@@ -145,12 +150,8 @@ function showIndicadoresEduca() {
       </div>
 
       <form id="formEduca" action="">
-        <input type="radio" name="indicator" value="Proporción de inscripciones de mujeres con respecto a varones en la educación terciaria (%)"> Proporção de matrículas de mulheres em relação a homens no
-        ensino superior (%)<br>
-        <input type="radio" name="indicator" value="Proporción de inscripciones de mujeres con respecto a varones en la educación secundaria (%)"> Proporção de matrículas de mulheres em relação ao sexo
-        masculino no ensino médio (%)<br>
-        <input type="radio" name="indicator" value="Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)"> Proporção de matrículas de mulheres em relação ao sexo
-        masculino no ensino fundamental (%)
+        <input type="radio" name="indicator" value="Mujeres que creen que está justificado que un marido golpee a su esposa (cualquiera de las cinco razones) (%)"> Mulheres que acreditam que um marido tem justificativa de bater em sua esposa (qualquer uma das cinco razões*) (%)<br>
+        <input type="radio" name="indicator" value="Proporción de mujeres víctimas de violencia física o sexual en los últimos 12 meses (% de mujeres de entre 15 y 49 años)"> Proporção de mulheres vítimas de violência física ou sexual nos últimos 12 meses (% de mulheres entre 15 e 49 anos)<br>
         <input id="btnEscolha" type="button" value="Explorar">
       </form>
 
@@ -161,7 +162,7 @@ function showIndicadoresEduca() {
     </div>
     <article>
       <div class="ball-topic"></div>
-      <h1>EDUCAÇÃO</h1>
+      <h1>VIOLÊNCIA</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam sit facilis odit magnam nulla rem
         fugiat consequuntur perferendis explicabo, amet ipsa ex dolor vitae sed quasi totam, veritatis nihil?</p>
       <div class="element">
