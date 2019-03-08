@@ -164,3 +164,116 @@ function selectCountryEduca() {
           
         </article>`
   }
+
+
+
+  // trash 08/03/2019 -sexta
+
+  
+// function indexIndicator(array, attr, value) {
+//   for (var i = 0; i < array.length; i++) {
+//     if (array[i][attr] === value) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// const arrayIndicaBra = WORLDBANK.BRA.indicators
+// const arrayIndicaPer = WORLDBANK.PER.indicators
+// const arrayIndicaMex = WORLDBANK.MEX.indicators
+// const arrayIndicaChi = WORLDBANK.CHL.indicators
+
+// function getEducaBra() {
+//   return indexIndicator(arrayIndicaBra, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)')
+
+//   indexIndicator(arrayIndicaBra, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación secundaria (%)')
+
+//   indexIndicator(arrayIndicaBra, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación terciaria (%)')
+
+// }
+
+// function getEducaChl() {
+//   indexIndicator(arrayIndicaChi, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)')
+
+//   indexIndicator(arrayIndicaChi, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación secundaria (%)')
+
+//   indexIndicator(arrayIndicaChi, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación terciaria (%)')
+
+// }
+
+// function getEducaMex() {
+//   indexIndicator(arrayIndicaMex, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)')
+
+//   indexIndicator(arrayIndicaMex, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación secundaria (%)')
+
+//   indexIndicator(arrayIndicaMex, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación terciaria (%)')
+
+// }
+
+
+// function getEducaPer() {
+//   indexIndicator(arrayIndicaPer, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)')
+
+//   indexIndicator(arrayIndicaPer, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación secundaria (%)')
+
+//   indexIndicator(arrayIndicaPer, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación terciaria (%)')
+
+// }
+
+
+// let educaBraUm = indexIndicator(arrayIndicaBra, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)')
+
+// let educaBraDois = indexIndicator(arrayIndicaBra, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación secundaria (%)')
+
+// let educaBraTres = indexIndicator(arrayIndicaBra, 'indicatorName', 'Proporción de inscripciones de mujeres con respecto a varones en la educación terciaria (%)')
+
+// console.log(educaBraUm, educaBraDois, educaBraTres)
+
+
+
+// function cliqueBrasil() {
+//   return WORLDBANK.BRA['indicators']  
+// }
+
+
+
+// // console.log(WORLDBANK.BRA['indicators'][74])
+
+
+
+// // document.getElementById("btnEscolha").addEventListener('click', funcaozinha)
+
+// // function funcaozinha(e){
+// //   let listaRadios = document.getElementsByTagName('input')
+// //   for (radio of listaRadios){
+// //     if (radio.getAttribute('type')==='radio'){
+// //       console.log('foi')
+      
+// //     }  
+// //   }
+// // }
+
+
+// // if(document.getElementById("c").checked==false && document.getElementById("i").checked==false && document.getElementById("l").checked==false) {
+// // 	alert( "Preencha o campo LOCALIZAÇÃO corretamente." );
+// // 	return false;
+// // }
+
+
+
+// // function printValue() {
+// //   valor = document.getElementById("formEduca").indicator.value;
+// //   document.getElementById('escolha').innerHTML = valor;
+// // }
+
+// // function getContent() {
+// //   return document.getElementById("escolha").innerHTML;
+// // }
+
+// //   // return WORLDBANK["BRA"]["indicators"][num]["data"][2015]
+
+
+// // const verData = WORLDBANK["BRA"]["indicators"][72]['indicatorName']
+
+// // console.log(verData)
