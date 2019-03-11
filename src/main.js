@@ -43,11 +43,13 @@ function printValue() {
   //  console.log(typeof escolhaPeru)
 
 
-  let newStringPeru = JSON.stringify(escolhaPeru, null, 2)
-  document.getElementById('indicators-div-peru').innerHTML = escolhaPeru.data["2005"]
+  document.getElementById('indicators-div-peru').innerHTML = "Perú 2013:  " + escolhaPeru.data["2013"]
+  document.getElementById('indicators-div-peru').innerHTML = "Perú 2014:  " + escolhaPeru.data["2014"]
+  document.getElementById('indicators-div-peru').innerHTML = "Perú 2015:  " + escolhaPeru.data["2015"]
 
-  let newStringBrasil = JSON.stringify(escolhaBrasil, null, 2)
-  document.getElementById('indicators-div-brasil').innerHTML = newStringBrasil
+  document.getElementById('indicators-div-brasil').innerHTML = "Brasil 2013:  " + escolhaBrasil.data["2013"]
+  document.getElementById('indicators-div-brasil').innerHTML ="Brasil 2014:  " + escolhaBrasil.data["2014"]
+  document.getElementById('indicators-div-brasil').innerHTML = "Brasil 2015:  " + escolhaBrasil.data["2015"]
 
   // descobrir como se livrar do maldito undefined
   elements = document.getElementById("btnEscolha");
@@ -106,8 +108,8 @@ function showIndicadoresEduca() {
       <h1 class="title-article">EDUCAÇÃO</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam sit facilis odit magnam nulla rem
         fugiat consequuntur perferendis explicabo, amet ipsa ex dolor vitae sed quasi totam, veritatis nihil?</p>
-        <p id="indicators-div-peru"></p>
-        <p id="indicators-div-brasil"></p>
+        <div id="indicators-div-peru"></div>
+        <div id="indicators-div-brasil"></div>
     </article>
 `
 }
