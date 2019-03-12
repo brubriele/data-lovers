@@ -9,7 +9,8 @@ body, .container {
 .top {
     display: flex;
     align-items: center;
-    background: url(img/background-data-lovers.png) no-repeat center center;
+    background-color: #1C1A1A;
+    background: url(img/giphy3.gif) no-repeat center center;
     background-size: 100%;
     background-attachment: fixed;
     justify-content: space-between;
@@ -25,8 +26,8 @@ body, .container {
 
 
 h1, h2 {
-    color: #FFFFFF;
-    left: 27%;
+    /* color: #FFFFFF;
+    left: 27%; */
 }
 
 h4 {
@@ -42,7 +43,7 @@ h4 {
 
 
 
-.ball-left, .ball-right, .ball-topic {
+.ball-left, .ball-right{
     position: relative;
     width: 360px;
     height: 360px;
@@ -52,7 +53,8 @@ h4 {
     
 
 }
-.ball-topic, .text-top, h2 {
+
+.text-top, h2 {
     opacity: 1.9;
     position: absolute;
     width: 340px;
@@ -60,11 +62,27 @@ h4 {
 }
 
 .text-top {
-    width: 42%;
-    text-align: center;
-    left: 28%;
-    top: 50%;
+    width: 100%;
+    top: 35%;
 }
+
+.left {
+    text-align: end;
+    color: #AB69D5;
+    padding: -19px;
+    position: absolute;
+    right: 65px;
+
+}
+
+.right {
+    text-align: start;
+    padding-left: 27px;
+    color: white;
+
+}
+
+
 
 /* 
 .ball-left, .ball-right {
@@ -81,31 +99,49 @@ h4 {
 
 
 .ball-left{
-    background-color: #FC9453;
+    background-color: #AB69D5;
     left: 37%;
 }
 .ball-right{
-    background-color: #52514E;
+    background-color: rgba(252, 254, 253, 0.767);
     left: 45%;
 }
 
 .menu {
-    background-color: #FC9453;
+    background-color: white;
     border: none;
-    color: white;
+    color: #AB69D5;
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 5px;
-  }
-
-  .menu{
+    animation: color-me-in 2.7s;
+    animation-delay: 4s;
+    animation-iteration-count:infinite;
     border-radius: 25px;
   }
 
- 
+
+  .menu:hover {
+    background: white;
+    color: rgb(151, 54, 211);
+  }
+
+  @keyframes color-me-in {
+    /* You could think of as "step 1" */
+    0% {
+      background: white;
+      color: #AB69D5;
+    }
+    /* You could think of as "step 2" */
+    100% {
+      background: #AB69D5;
+      color: white;
+    }
+  }
+  
 
   .btn-violence, .btn-education, .btn-population {
     background-color: #4B4A47;
@@ -122,8 +158,11 @@ h4 {
   aside, .text-topic {
     display: flex;
     flex-direction: column;
-    margin-right: 35px;
+    margin-right: 45px;
   }
+
+
+
 
 
 .box-select {
@@ -159,7 +198,7 @@ h4 {
 
 .p-country {
     position: relative;
-    color: #FC9453;
+    color: #AB69D5;
     bottom: 70px;
     right: 45px;
     font-weight: 800;
@@ -300,7 +339,7 @@ nav {
         border-radius: 50px;
         position: absolute;
         top: 3px;
-        background: #FC9453;
+        background: #AB69D5;
         box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
         text-shadow: 0px;
         left: 3px;
@@ -309,8 +348,8 @@ nav {
     
     .radio-indicator:checked {
         background-color: #e9ecee;
-        color: #FC9453;
-        border: 1px solid #FC9453;
+        color: #AB69D5;
+        border: 1px solid #AB69D5;
         box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
     }
     
@@ -318,7 +357,9 @@ nav {
         box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
     }
 
-
-    
+ .arrow {
+     display: flex;
+     width: 40%;
+ }
 
 /* transição ancora */
