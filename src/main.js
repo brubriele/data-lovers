@@ -496,33 +496,54 @@ function averageMexico() {
   let anoUm = parseFloat(document.getElementById("MEX-2013").innerHTML);
   let anoDois = parseFloat(document.getElementById("MEX-2014").innerHTML);
   let anoTres = parseFloat(document.getElementById("MEX-2015").innerHTML);
-  let average = (anoUm + anoDois + anoTres) / 3
-  if (average === NaN) {
+  let avrgMEX = JSON.stringify((anoUm + anoDois + anoTres) / 3)
+  if (avrgMEX.length != 4) {
+    console.log("aqui")
+    document.getElementById('p-avrg-MEX').innerHTML = "México:" + avrgMEX 
+  } else {
+    document.getElementById('p-avrg-MEX').innerHTML = "México: não disponível" 
   }
- document.getElementById('p-avrg-MEX').innerHTML = "México:" + average
 }
 
 function averageBrasil() {
   let anoUm = parseFloat(document.getElementById("BRA-2013").innerHTML);
   let anoDois = parseFloat(document.getElementById("BRA-2014").innerHTML);
   let anoTres = parseFloat(document.getElementById("BRA-2015").innerHTML);
-  document.getElementById('p-avrg-BRA').innerHTML = "Brasil:" + (anoUm + anoDois + anoTres) / 3
+  let avrgBRA = JSON.stringify((anoUm + anoDois + anoTres) / 3)
+  if (avrgBRA.length != 4) {
+    console.log("aqui")
+    document.getElementById('p-avrg-BRA').innerHTML = "Brasil:" + avrgBRA 
+  } else {
+    document.getElementById('p-avrg-BRA').innerHTML = "Brasil: não disponível" 
+  }
 }
-
 
 function averagePeru() {
   let anoUm = parseFloat(document.getElementById("PER-2013").innerHTML);
   let anoDois = parseFloat(document.getElementById("PER-2014").innerHTML);
   let anoTres = parseFloat(document.getElementById("PER-2015").innerHTML);
-  document.getElementById('p-avrg-PER').innerHTML = "Perú:" + (anoUm + anoDois + anoTres) / 3
+  let avrgPER = JSON.stringify((anoUm + anoDois + anoTres) / 3)
+  if (avrgPER.length != 4) {
+    console.log(avrgPER.length)
+    document.getElementById('p-avrg-PER').innerHTML = "Peru:" + avrgPER 
+  } else {
+    document.getElementById('p-avrg-PER').innerHTML = "Peru: não disponível" 
+  }
 }
+
 
 
 function averageChile() {
   let anoUm = parseFloat(document.getElementById("CHL-2013").innerHTML);
   let anoDois = parseFloat(document.getElementById("CHL-2014").innerHTML);
   let anoTres = parseFloat(document.getElementById("CHL-2015").innerHTML);
-  document.getElementById('p-avrg-CHL').innerHTML = "Chile:" + (anoUm + anoDois + anoTres) / 3
+  let avrgCHL = JSON.stringify((anoUm + anoDois + anoTres) / 3)
+  if (avrgCHL.length != 4) {
+    console.log("aqui")
+    document.getElementById('p-avrg-CHL').innerHTML = "Chile:" + avrgCHL 
+  } else {
+    document.getElementById('p-avrg-CHL').innerHTML = "Chile: não disponível" 
+  }
 }
 
 
