@@ -1,4 +1,4 @@
-body, .container {
+body, .container, .indicator-selection {
     margin: 0px;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
@@ -108,19 +108,10 @@ h4 {
 }
 
 .menu {
-    background-color: white;
-    border: none;
-    color: #AB69D5;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 5px;
     animation: color-me-in 2.7s;
     animation-delay: 4s;
     animation-iteration-count:infinite;
-    border-radius: 25px;
+    
   }
 
 
@@ -388,7 +379,7 @@ input[type=checkbox] + label:hover {
   background: #e4e4e4;
 }
 
-input[type=checkbox]:checked + label {
+input[type=checkbox]:checked + label, .btnEscolha {
   background: #AB69D5;
   color: #f0f0f0;
   animation: btn-color 0.5s ease-in-out;
@@ -408,5 +399,36 @@ input[type=checkbox]:checked +label span.label-name {
   top: 16px;
 }
 
+.menu, .btnEscolha {
+    background-color: white;
+    border: none;
+    color: #AB69D5;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 25px;
+}
 
+
+.btnEscolha {
+    background-color: #AB69D5;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.btnEscolha:hover {
+    background-color: rgb(196, 180, 206)
+}
+
+
+.visivel {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
 /* transição ancora */

@@ -4,29 +4,43 @@
 
 document.getElementById('btn-topic-educa').addEventListener('click', () => {
   showIndicadoresEduca();
+  activeClass()
+
   elements = document.getElementById("btnEscolha");
-  elements.addEventListener('click', printValue);
-  // printValue()
+  elements.addEventListener('click', () => {
+    printValue();
+    event.preventDefault()
+  })  
 })
 
 document.getElementById('btn-topic-viol').addEventListener('click', () => {
   showIndicadoresViol();
+  activeClass()
   elements = document.getElementById("btnEscolha");
-  elements.addEventListener('click', printValue);
-  printValue()
+  elements.addEventListener('click', () => {
+    printValue();
+    event.preventDefault()
+  })  
 })
 
 document.getElementById('btn-topic-pop').addEventListener('click', () => {
   showIndicadoresPop();
+  activeClass()
   elements = document.getElementById("btnEscolha");
-  elements.addEventListener('click', printValue);
-  printValue()
-  // doPais("BRA")
+  elements.addEventListener('click', () => {
+    printValue();
+    event.preventDefault()
+  })  
 })
 
 // function doPais(pais) {
 //   WORLDBANK[pais]
 // }
+
+function activeClass() {
+  document.getElementById('indicator-selection').classList.remove("hide");
+  document.getElementById('indicator-selection').classList.add("indicator-selection");
+}
 
 
 const basePeru = WORLDBANK.PER.indicators
@@ -173,7 +187,7 @@ function showIndicadoresEduca() {
           value="Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)">
       Proporção de matrículas de mulheres em relação ao sexo
       masculino no ensino fundamental (%)<br>
-      <input class="menu" id="btnEscolha" type="button" value="Explorar">
+      <button class="btnEscolha" id="btnEscolha" type="submit">Explorar</button>
   </form>
 
 
@@ -269,7 +283,7 @@ Mulheres que acreditam que um marido tem justificativa de bater em sua esposa (q
 <input class="radio-indicator" type="radio" name="indicator"
   value="Proporción de mujeres víctimas de violencia física o sexual en los últimos 12 meses (% de mujeres de entre 15 y 49 años)">
 Proporção de mulheres vítimas de violência física ou sexual nos últimos 12 meses (% de mulheres entre 15 e 49 anos)<br>
-<input class="menu" id="btnEscolha" type="button" value="Explorar">
+<button class="btnEscolha" id="btnEscolha" type="submit">Explorar</button>
   </form>
 
 
@@ -362,7 +376,7 @@ function showIndicadoresPop() {
   <form id="formIndic" action="">
   <input class="radio-indicator" type="radio" name="indicator" value="Población activa, mujeres (% de la población activa total)"> População activa, mulheres (% do total da população activa)<br>
   <input class="radio-indicator" type="radio" name="indicator" value="Población entre 15 y 64 años de edad, mujeres (% del total)"> População entre 15 e 64 anos de idade, mulheres (% do total)<br>
-  <input class="menu" id="btnEscolha" type="button" value="Explorar">
+  <button class="btnEscolha" id="btnEscolha" type="submit">Explorar</button>
   </form>
 
 
