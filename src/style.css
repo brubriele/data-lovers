@@ -156,6 +156,7 @@ h4 {
 
 img {
     width: 100%;
+    height: 65%;
 }
 
 .box-select {
@@ -168,11 +169,13 @@ img {
 .bra, .per, .chi, .mex {
     width: 100%;
     flex-basis: 49%;
+    flex: 0;
 }
 
 .box-country {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-left: 28%;
     padding-right: 28%;
     width: 42%;
@@ -368,7 +371,7 @@ input[type=checkbox] + label {
   position: relative;
   border-radius: 40px;
   padding: 25px 40px;
-  width: 1em;
+  width: 3em;
   background: #eeeeee;
   font-family: Arial, Helvetica, sans-serif;
   color: #444;
@@ -398,6 +401,8 @@ input[type=checkbox]:checked +label span.label-name {
   left: 16px;
   top: 16px;
 }
+
+
 
 .menu, .btnEscolha {
     background-color: white;
@@ -432,3 +437,10 @@ input[type=checkbox]:checked +label span.label-name {
     display: none;
 }
 /* transição ancora */
+.pin {
+    position: absolute;
+    left: 98%;
+    top: 93%;
+    margin-left: -38px;
+    margin-top: -53px;
+}

@@ -57,8 +57,8 @@ function printValue() {
   let selecionadoChile = indexIndicator(baseChile, 'indicatorName', valor)
   let escolhaPeru = WORLDBANK.PER.indicators[selecionadoPeru]
   let escolhaBrasil = WORLDBANK.BRA.indicators[selecionadoBrasil]
-  let escolhaMexico = WORLDBANK.BRA.indicators[selecionadoMexico]
-  let escolhaChile = WORLDBANK.BRA.indicators[selecionadoChile]
+  let escolhaMexico = WORLDBANK.MEX.indicators[selecionadoMexico]
+  let escolhaChile = WORLDBANK.CHL.indicators[selecionadoChile]
 
   // console.log("PErú", escolhaPeru.data["2013"], escolhaPeru.data["2014"], escolhaPeru.data["2015"])
   // console.log(escolhaBrasil.data["2013"], escolhaBrasil.data["2014"], escolhaBrasil.data["2015"])
@@ -145,6 +145,10 @@ function showIndicadoresEduca() {
           <img class="img-bra" src="img/bra.png" alt="mapa do brasil">
           <input type="checkbox" id="BRA" name="BRA">
           <label for="BRA">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Brasil</span>
           </label>
       </div>
@@ -153,6 +157,10 @@ function showIndicadoresEduca() {
           <img class="img-mex" src="img/mex.png" alt="mapa do méxico">
           <input type="checkbox" id="MEX" name="MEX">
           <label for="MEX">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">México</span>
           </label>
       </div>
@@ -161,6 +169,10 @@ function showIndicadoresEduca() {
          <img class="img-per" src="img/per.png" alt="mapa do perú">
           <input type="checkbox" id="PER" name="PER">
           <label for="PER">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Perú</span>
           </label>
       </div>
@@ -169,6 +181,10 @@ function showIndicadoresEduca() {
           <img class="img-chi" src="img/chi.png" alt="mapa do chile">
           <input type="checkbox" id="CHL" name="CHL">
           <label for="CHL">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Chile</span>
           </label>
       </div>
@@ -247,6 +263,10 @@ function showIndicadoresViol() {
           <img class="img-bra" src="img/bra.png" alt="mapa do brasil">
           <input type="checkbox" id="BRA" name="BRA">
           <label for="BRA">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Brasil</span>
           </label>
       </div>
@@ -255,6 +275,10 @@ function showIndicadoresViol() {
           <img class="img-mex" src="img/mex.png" alt="mapa do méxico">
           <input type="checkbox" id="MEX" name="MEX">
           <label for="MEX">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">México</span>
           </label>
       </div>
@@ -263,6 +287,10 @@ function showIndicadoresViol() {
          <img class="img-per" src="img/per.png" alt="mapa do perú">
           <input type="checkbox" id="PER" name="PER">
           <label for="PER">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Perú</span>
           </label>
       </div>
@@ -271,6 +299,10 @@ function showIndicadoresViol() {
           <img class="img-chi" src="img/chi.png" alt="mapa do chile">
           <input type="checkbox" id="CHL" name="CHL">
           <label for="CHL">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Chile</span>
           </label>
       </div>
@@ -344,6 +376,10 @@ function showIndicadoresPop() {
           <img class="img-bra" src="img/bra.png" alt="mapa do brasil">
           <input type="checkbox" id="BRA" name="BRA">
           <label for="BRA">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Brasil</span>
           </label>
       </div>
@@ -352,6 +388,10 @@ function showIndicadoresPop() {
           <img class="img-mex" src="img/mex.png" alt="mapa do méxico">
           <input type="checkbox" id="MEX" name="MEX">
           <label for="MEX">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">México</span>
           </label>
       </div>
@@ -360,6 +400,10 @@ function showIndicadoresPop() {
          <img class="img-per" src="img/per.png" alt="mapa do perú">
           <input type="checkbox" id="PER" name="PER">
           <label for="PER">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Perú</span>
           </label>
       </div>
@@ -368,6 +412,10 @@ function showIndicadoresPop() {
           <img class="img-chi" src="img/chi.png" alt="mapa do chile">
           <input type="checkbox" id="CHL" name="CHL">
           <label for="CHL">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Chile</span>
           </label>
       </div>
