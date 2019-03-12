@@ -447,17 +447,17 @@ input[type=checkbox]:checked +label span.label-name {
 
 
 .show-avrg {
-    border-radius: 4px;
-    background-color: #f4511e;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
+  border-radius: 70px;
+  background-color: #AB69D5;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 25px;
+  padding: 8px;
+  width: 153px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
   }
   
   .show-avrg span {
