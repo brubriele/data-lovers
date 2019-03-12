@@ -484,3 +484,11 @@ input[type=checkbox]:checked +label span.label-name {
     opacity: 1;
     right: 0;
   }
+
+  #show-avrg {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+  }

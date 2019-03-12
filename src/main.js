@@ -38,6 +38,7 @@ document.getElementById('btn-topic-pop').addEventListener('click', () => {
 //   WORLDBANK[pais]
 // }
 
+
 function activeClass() {
   document.getElementById('indicator-selection').classList.remove("hide");
   document.getElementById('indicator-selection').classList.add("indicator-selection");
@@ -50,7 +51,6 @@ const baseMexico = WORLDBANK.MEX.indicators
 const baseChile = WORLDBANK.CHL.indicators
 
 function printValue() {
-
   let valor = document.getElementById("formIndic").indicator.value;
   let selecionadoPeru = indexIndicator(basePeru, 'indicatorName', valor)
   let selecionadoBrasil = indexIndicator(baseBrasil, 'indicatorName', valor)
@@ -60,13 +60,6 @@ function printValue() {
   let escolhaBrasil = WORLDBANK.BRA.indicators[selecionadoBrasil]
   let escolhaMexico = WORLDBANK.MEX.indicators[selecionadoMexico]
   let escolhaChile = WORLDBANK.CHL.indicators[selecionadoChile]
-
-  // console.log("PErú", escolhaPeru.data["2013"], escolhaPeru.data["2014"], escolhaPeru.data["2015"])
-  // console.log(escolhaBrasil.data["2013"], escolhaBrasil.data["2014"], escolhaBrasil.data["2015"])
-
-
-
-
   let checkBoxBRA = document.getElementById("BRA");
   let checkBoxPER = document.getElementById("PER");
   let checkBoxMEX = document.getElementById("MEX");
@@ -120,6 +113,15 @@ function printValue() {
 
   }
 
+  document.getElementById('btn-avrg').addEventListener('click', () => {
+ 
+    averageMexico()
+    averagePeru()
+    averageChile()
+    averageBrasil()
+    activeAvrg()
+  })
+
   function indexIndicator(array, attr, value) {
     for (var i = 0; i < array.length; i++) {
       if (array[i][attr] === value) {
@@ -129,8 +131,6 @@ function printValue() {
   }
 
 }
-
-
 
 function showIndicadoresEduca() {
   let indicaDiv = document.getElementById('indicator-selection');
@@ -216,7 +216,7 @@ function showIndicadoresEduca() {
 
   <table class="rwd-table">
       <tr>
-          <th>País</th>
+          <th>País</th> 
           <th>2013</th>
           <th>2014</th>
           <th>2015</th>
@@ -491,3 +491,67 @@ function showIndicadoresPop() {
 </div>
 </article>
 `}
+
+function averageMexico() {
+  let anoUm = parseFloat(document.getElementById("MEX-2013").innerHTML);
+  let anoDois = parseFloat(document.getElementById("MEX-2014").innerHTML);
+  let anoTres = parseFloat(document.getElementById("MEX-2015").innerHTML);
+  let avrgMEX = JSON.stringify((anoUm + anoDois + anoTres) / 3)
+  if (avrgMEX.length != 4) {
+    console.log("aqui")
+    document.getElementById('p-avrg-MEX').innerHTML = "México:" + avrgMEX 
+  } else {
+    document.getElementById('p-avrg-MEX').innerHTML = "México: não disponível" 
+  }
+}
+
+function averageBrasil() {
+  let anoUm = parseFloat(document.getElementById("BRA-2013").innerHTML);
+  let anoDois = parseFloat(document.getElementById("BRA-2014").innerHTML);
+  let anoTres = parseFloat(document.getElementById("BRA-2015").innerHTML);
+  let avrgBRA = JSON.stringify((anoUm + anoDois + anoTres) / 3)
+  if (avrgBRA.length != 4) {
+    console.log("aqui")
+    document.getElementById('p-avrg-BRA').innerHTML = "Brasil:" + avrgBRA 
+  } else {
+    document.getElementById('p-avrg-BRA').innerHTML = "Brasil: não disponível" 
+  }
+}
+
+function averagePeru() {
+  let anoUm = parseFloat(document.getElementById("PER-2013").innerHTML);
+  let anoDois = parseFloat(document.getElementById("PER-2014").innerHTML);
+  let anoTres = parseFloat(document.getElementById("PER-2015").innerHTML);
+  let avrgPER = JSON.stringify((anoUm + anoDois + anoTres) / 3)
+  if (avrgPER.length != 4) {
+    console.log(avrgPER.length)
+    document.getElementById('p-avrg-PER').innerHTML = "Peru:" + avrgPER 
+  } else {
+    document.getElementById('p-avrg-PER').innerHTML = "Peru: não disponível" 
+  }
+}
+
+
+
+function averageChile() {
+  let anoUm = parseFloat(document.getElementById("CHL-2013").innerHTML);
+  let anoDois = parseFloat(document.getElementById("CHL-2014").innerHTML);
+  let anoTres = parseFloat(document.getElementById("CHL-2015").innerHTML);
+  let avrgCHL = JSON.stringify((anoUm + anoDois + anoTres) / 3)
+  if (avrgCHL.length != 4) {
+    console.log("aqui")
+    document.getElementById('p-avrg-CHL').innerHTML = "Chile:" + avrgCHL 
+  } else {
+    document.getElementById('p-avrg-CHL').innerHTML = "Chile: não disponível" 
+  }
+}
+
+
+
+
+function activeAvrg() {
+  document.getElementById('show-avrg').classList.remove("hide");
+  document.getElementById('show-avrg').classList.add("visivel");
+  event.preventDefault()
+}
+
