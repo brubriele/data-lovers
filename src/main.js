@@ -73,7 +73,7 @@ function printValue() {
     document.getElementById('PER-2013').innerHTML = escolhaPeru.data["2013"]
     document.getElementById('PER-2014').innerHTML = escolhaPeru.data["2014"]
     document.getElementById('PER-2015').innerHTML = escolhaPeru.data["2015"]
-  }  else if (checkBoxPER.checked == false) {
+  } else if (checkBoxPER.checked == false) {
     document.getElementById('PER-nomePais').innerHTML = ""
     document.getElementById('PER-2013').innerHTML = ""
     document.getElementById('PER-2014').innerHTML = ""
@@ -85,7 +85,7 @@ function printValue() {
     document.getElementById('MEX-2013').innerHTML = escolhaMexico.data["2013"]
     document.getElementById('MEX-2014').innerHTML = escolhaMexico.data["2014"]
     document.getElementById('MEX-2015').innerHTML = escolhaMexico.data["2015"]
-  }  else if (checkBoxMEX.checked == false) {
+  } else if (checkBoxMEX.checked == false) {
     document.getElementById('MEX-nomePais').innerHTML = ""
     document.getElementById('MEX-2013').innerHTML = ""
     document.getElementById('MEX-2014').innerHTML = ""
@@ -97,7 +97,7 @@ function printValue() {
     document.getElementById('CHL-2013').innerHTML = escolhaChile.data["2013"]
     document.getElementById('CHL-2014').innerHTML = escolhaChile.data["2014"]
     document.getElementById('CHL-2015').innerHTML = escolhaChile.data["2015"]
-  }  else if (checkBoxCHL.checked == false) {
+  } else if (checkBoxCHL.checked == false) {
     document.getElementById('CHL-nomePais').innerHTML = ""
     document.getElementById('CHL-2013').innerHTML = ""
     document.getElementById('CHL-2014').innerHTML = ""
@@ -263,19 +263,13 @@ function showIndicadoresViol() {
   </div>
 
   <form id="formIndic" action="">
-      <input class="radio-indicator" type="radio" name="indicator"
-          value="Proporción de inscripciones de mujeres con respecto a varones en la educación terciaria (%)">
-      Proporção de matrículas de mulheres em relação a homens no
-      ensino superior (%)<br>
-      <input class="radio-indicator" type="radio" name="indicator"
-          value="Proporción de inscripciones de mujeres con respecto a varones en la educación secundaria (%)">
-      Proporção de matrículas de mulheres em relação ao sexo
-      masculino no ensino médio (%)<br>
-      <input class="radio-indicator" type="radio" name="indicator"
-          value="Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)">
-      Proporção de matrículas de mulheres em relação ao sexo
-      masculino no ensino fundamental (%)<br>
-      <input class="menu" id="btnEscolha" type="button" value="Explorar">
+  <input class="radio-indicator" type="radio" name="indicator"
+  value="Mujeres que creen que está justificado que un marido golpee a su esposa (cualquiera de las cinco razones) (%)">
+Mulheres que acreditam que um marido tem justificativa de bater em sua esposa (qualquer uma das cinco razões*) (%)<br>
+<input class="radio-indicator" type="radio" name="indicator"
+  value="Proporción de mujeres víctimas de violencia física o sexual en los últimos 12 meses (% de mujeres de entre 15 y 49 años)">
+Proporção de mulheres vítimas de violência física ou sexual nos últimos 12 meses (% de mulheres entre 15 e 49 anos)<br>
+<input class="menu" id="btnEscolha" type="button" value="Explorar">
   </form>
 
 
@@ -366,19 +360,9 @@ function showIndicadoresPop() {
   </div>
 
   <form id="formIndic" action="">
-      <input class="radio-indicator" type="radio" name="indicator"
-          value="Proporción de inscripciones de mujeres con respecto a varones en la educación terciaria (%)">
-      Proporção de matrículas de mulheres em relação a homens no
-      ensino superior (%)<br>
-      <input class="radio-indicator" type="radio" name="indicator"
-          value="Proporción de inscripciones de mujeres con respecto a varones en la educación secundaria (%)">
-      Proporção de matrículas de mulheres em relação ao sexo
-      masculino no ensino médio (%)<br>
-      <input class="radio-indicator" type="radio" name="indicator"
-          value="Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)">
-      Proporção de matrículas de mulheres em relação ao sexo
-      masculino no ensino fundamental (%)<br>
-      <input class="menu" id="btnEscolha" type="button" value="Explorar">
+  <input class="radio-indicator" type="radio" name="indicator" value="Población activa, mujeres (% de la población activa total)"> População activa, mulheres (% do total da população activa)<br>
+  <input class="radio-indicator" type="radio" name="indicator" value="Población entre 15 y 64 años de edad, mujeres (% del total)"> População entre 15 e 64 anos de idade, mulheres (% do total)<br>
+  <input class="menu" id="btnEscolha" type="button" value="Explorar">
   </form>
 
 
