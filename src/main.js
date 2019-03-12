@@ -16,6 +16,7 @@ document.getElementById('btn-topic-educa').addEventListener('click', () => {
 document.getElementById('btn-topic-viol').addEventListener('click', () => {
   showIndicadoresViol();
   activeClass()
+
   elements = document.getElementById("btnEscolha");
   elements.addEventListener('click', () => {
     printValue();
@@ -118,10 +119,6 @@ function printValue() {
     document.getElementById('CHL-2015').innerHTML = ""
 
   }
-
-  document.getElementById('btnEscolha').addEventListener('click', () => {
-    printValue(escolhaChile);
-  })
 
   function indexIndicator(array, attr, value) {
     for (var i = 0; i < array.length; i++) {
@@ -249,11 +246,20 @@ function showIndicadoresEduca() {
           <td data-th="MEX-2015" id="MEX-2015"></td>
       </tr>
   </table>
+  <button id="btn-avrg" class="show-avrg" type="submit"><span>Média </span></button>
+
+<div id="show-avrg" class="hide">
+    <p id="p-avrg-PER"></p>
+    <p id="p-avrg-BRA"></p>
+    <p id="p-avrg-MEX"></p>
+    <p id="p-avrg-CHL"></p>
+</div>
 </article>
 `
 }
 
 function showIndicadoresViol() {
+  console.log('chegou')
   let indicaDiv = document.getElementById('indicator-selection');
   indicaDiv.innerHTML = `
   <div class="box-select">
@@ -309,13 +315,9 @@ function showIndicadoresViol() {
   </div>
 
   <form id="formIndic" action="">
-  <input class="radio-indicator" type="radio" name="indicator"
-  value="Mujeres que creen que está justificado que un marido golpee a su esposa (cualquiera de las cinco razones) (%)">
-Mulheres que acreditam que um marido tem justificativa de bater em sua esposa (qualquer uma das cinco razões*) (%)<br>
-<input class="radio-indicator" type="radio" name="indicator"
-  value="Proporción de mujeres víctimas de violencia física o sexual en los últimos 12 meses (% de mujeres de entre 15 y 49 años)">
-Proporção de mulheres vítimas de violência física ou sexual nos últimos 12 meses (% de mulheres entre 15 e 49 anos)<br>
-<button class="btnEscolha" id="btnEscolha" type="submit">Explorar</button>
+  <input class="radio-indicator" type="radio" name="indicator" value="Mujeres que creen que está justificado que un marido golpee a su esposa (cualquiera de las cinco razones) (%)"> Mulheres que acreditam que um marido tem justificativa de bater em sua esposa (qualquer uma das cinco razões*) (%)<br>
+  <input class="radio-indicator" type="radio" name="indicator" value="Proporción de mujeres víctimas de violencia física o sexual en los últimos 12 meses (% de mujeres de entre 15 y 49 años)"> Proporção de mulheres vítimas de violência física ou sexual nos últimos 12 meses (% de mulheres entre 15 e 49 anos)<br>
+  <button class="btnEscolha" id="btnEscolha" type="submit">Explorar</button>
   </form>
 
 
@@ -361,7 +363,16 @@ Proporção de mulheres vítimas de violência física ou sexual nos últimos 12
           <td data-th="MEX-2015" id="MEX-2015"></td>
       </tr>
   </table>
+  <button id="btn-avrg" class="show-avrg" type="submit"><span>Média </span></button>
+
+<div id="show-avrg" class="hide">
+    <p id="p-avrg-PER"></p>
+    <p id="p-avrg-BRA"></p>
+    <p id="p-avrg-MEX"></p>
+    <p id="p-avrg-CHL"></p>
+</div>
 </article>
+  
 `
 }
 
@@ -470,31 +481,13 @@ function showIndicadoresPop() {
           <td data-th="MEX-2015" id="MEX-2015"></td>
       </tr>
   </table>
+  <button id="btn-avrg" class="show-avrg" type="submit"><span>Média </span></button>
+
+<div id="show-avrg" class="hide">
+    <p id="p-avrg-PER"></p>
+    <p id="p-avrg-BRA"></p>
+    <p id="p-avrg-MEX"></p>
+    <p id="p-avrg-CHL"></p>
+</div>
 </article>
-`
-}
-
-
-// window.onload = function() {
-//   // alert("carregou");
-//   showProducts();
-// };
-
-// function getProducts(){
-//   return data["items"];
-// }
-
-// function showProducts(){
-//   let productDiv = document.getElementById('products-div');
-//   productDiv.innerHTML = `
-//   ${getProducts().map((produto) => `
-//     <div class="product-item">
-//       <img src="${produto["product"]["images"][0]}" class="product-img">
-//       <div class="text-name">
-//         <h3 class="product-name">${produto["product"]["name"]}</h3>
-//       </div>
-//       <div class="text-price">
-//         <p class="product-price">${Number(produto["product"]["price"]["value"]).toLocaleString('pt-br', {minimumFractionDigits:2, style: 'currency', currency: 'BRL'})}</p>
-//       </div>
-//     </div>`).join("")}`
-// }
+`}
