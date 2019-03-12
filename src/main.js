@@ -4,29 +4,44 @@
 
 document.getElementById('btn-topic-educa').addEventListener('click', () => {
   showIndicadoresEduca();
+  activeClass()
+
   elements = document.getElementById("btnEscolha");
-  elements.addEventListener('click', printValue);
-  // printValue()
+  elements.addEventListener('click', () => {
+    printValue();
+    event.preventDefault()
+  })  
 })
 
 document.getElementById('btn-topic-viol').addEventListener('click', () => {
   showIndicadoresViol();
+  activeClass()
+
   elements = document.getElementById("btnEscolha");
-  elements.addEventListener('click', printValue);
-  printValue()
+  elements.addEventListener('click', () => {
+    printValue();
+    event.preventDefault()
+  })  
 })
 
 document.getElementById('btn-topic-pop').addEventListener('click', () => {
   showIndicadoresPop();
+  activeClass()
   elements = document.getElementById("btnEscolha");
-  elements.addEventListener('click', printValue);
-  printValue()
-  // doPais("BRA")
+  elements.addEventListener('click', () => {
+    printValue();
+    event.preventDefault()
+  })  
 })
 
 // function doPais(pais) {
 //   WORLDBANK[pais]
 // }
+
+function activeClass() {
+  document.getElementById('indicator-selection').classList.remove("hide");
+  document.getElementById('indicator-selection').classList.add("indicator-selection");
+}
 
 
 const basePeru = WORLDBANK.PER.indicators
@@ -43,8 +58,8 @@ function printValue() {
   let selecionadoChile = indexIndicator(baseChile, 'indicatorName', valor)
   let escolhaPeru = WORLDBANK.PER.indicators[selecionadoPeru]
   let escolhaBrasil = WORLDBANK.BRA.indicators[selecionadoBrasil]
-  let escolhaMexico = WORLDBANK.BRA.indicators[selecionadoMexico]
-  let escolhaChile = WORLDBANK.BRA.indicators[selecionadoChile]
+  let escolhaMexico = WORLDBANK.MEX.indicators[selecionadoMexico]
+  let escolhaChile = WORLDBANK.CHL.indicators[selecionadoChile]
 
   // console.log("PErú", escolhaPeru.data["2013"], escolhaPeru.data["2014"], escolhaPeru.data["2015"])
   // console.log(escolhaBrasil.data["2013"], escolhaBrasil.data["2014"], escolhaBrasil.data["2015"])
@@ -105,10 +120,6 @@ function printValue() {
 
   }
 
-  document.getElementById('btnEscolha').addEventListener('click', () => {
-    printValue(escolhaChile);
-  })
-
   function indexIndicator(array, attr, value) {
     for (var i = 0; i < array.length; i++) {
       if (array[i][attr] === value) {
@@ -131,6 +142,10 @@ function showIndicadoresEduca() {
           <img class="img-bra" src="img/bra.png" alt="mapa do brasil">
           <input type="checkbox" id="BRA" name="BRA">
           <label for="BRA">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Brasil</span>
           </label>
       </div>
@@ -139,6 +154,10 @@ function showIndicadoresEduca() {
           <img class="img-mex" src="img/mex.png" alt="mapa do méxico">
           <input type="checkbox" id="MEX" name="MEX">
           <label for="MEX">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">México</span>
           </label>
       </div>
@@ -147,6 +166,10 @@ function showIndicadoresEduca() {
          <img class="img-per" src="img/per.png" alt="mapa do perú">
           <input type="checkbox" id="PER" name="PER">
           <label for="PER">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Perú</span>
           </label>
       </div>
@@ -155,6 +178,10 @@ function showIndicadoresEduca() {
           <img class="img-chi" src="img/chi.png" alt="mapa do chile">
           <input type="checkbox" id="CHL" name="CHL">
           <label for="CHL">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Chile</span>
           </label>
       </div>
@@ -173,7 +200,7 @@ function showIndicadoresEduca() {
           value="Proporción de inscripciones de mujeres con respecto a varones en la educación primaria (%)">
       Proporção de matrículas de mulheres em relação ao sexo
       masculino no ensino fundamental (%)<br>
-      <input class="menu" id="btnEscolha" type="button" value="Explorar">
+      <button class="btnEscolha" id="btnEscolha" type="submit">Explorar</button>
   </form>
 
 
@@ -219,11 +246,20 @@ function showIndicadoresEduca() {
           <td data-th="MEX-2015" id="MEX-2015"></td>
       </tr>
   </table>
+  <button id="btn-avrg" class="show-avrg" type="submit"><span>Média </span></button>
+
+<div id="show-avrg" class="hide">
+    <p id="p-avrg-PER"></p>
+    <p id="p-avrg-BRA"></p>
+    <p id="p-avrg-MEX"></p>
+    <p id="p-avrg-CHL"></p>
+</div>
 </article>
 `
 }
 
 function showIndicadoresViol() {
+  console.log('chegou')
   let indicaDiv = document.getElementById('indicator-selection');
   indicaDiv.innerHTML = `
   <div class="box-select">
@@ -233,6 +269,10 @@ function showIndicadoresViol() {
           <img class="img-bra" src="img/bra.png" alt="mapa do brasil">
           <input type="checkbox" id="BRA" name="BRA">
           <label for="BRA">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Brasil</span>
           </label>
       </div>
@@ -241,6 +281,10 @@ function showIndicadoresViol() {
           <img class="img-mex" src="img/mex.png" alt="mapa do méxico">
           <input type="checkbox" id="MEX" name="MEX">
           <label for="MEX">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">México</span>
           </label>
       </div>
@@ -249,6 +293,10 @@ function showIndicadoresViol() {
          <img class="img-per" src="img/per.png" alt="mapa do perú">
           <input type="checkbox" id="PER" name="PER">
           <label for="PER">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Perú</span>
           </label>
       </div>
@@ -257,19 +305,19 @@ function showIndicadoresViol() {
           <img class="img-chi" src="img/chi.png" alt="mapa do chile">
           <input type="checkbox" id="CHL" name="CHL">
           <label for="CHL">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Chile</span>
           </label>
       </div>
   </div>
 
   <form id="formIndic" action="">
-  <input class="radio-indicator" type="radio" name="indicator"
-  value="Mujeres que creen que está justificado que un marido golpee a su esposa (cualquiera de las cinco razones) (%)">
-Mulheres que acreditam que um marido tem justificativa de bater em sua esposa (qualquer uma das cinco razões*) (%)<br>
-<input class="radio-indicator" type="radio" name="indicator"
-  value="Proporción de mujeres víctimas de violencia física o sexual en los últimos 12 meses (% de mujeres de entre 15 y 49 años)">
-Proporção de mulheres vítimas de violência física ou sexual nos últimos 12 meses (% de mulheres entre 15 e 49 anos)<br>
-<input class="menu" id="btnEscolha" type="button" value="Explorar">
+  <input class="radio-indicator" type="radio" name="indicator" value="Mujeres que creen que está justificado que un marido golpee a su esposa (cualquiera de las cinco razones) (%)"> Mulheres que acreditam que um marido tem justificativa de bater em sua esposa (qualquer uma das cinco razões*) (%)<br>
+  <input class="radio-indicator" type="radio" name="indicator" value="Proporción de mujeres víctimas de violencia física o sexual en los últimos 12 meses (% de mujeres de entre 15 y 49 años)"> Proporção de mulheres vítimas de violência física ou sexual nos últimos 12 meses (% de mulheres entre 15 e 49 anos)<br>
+  <button class="btnEscolha" id="btnEscolha" type="submit">Explorar</button>
   </form>
 
 
@@ -315,7 +363,16 @@ Proporção de mulheres vítimas de violência física ou sexual nos últimos 12
           <td data-th="MEX-2015" id="MEX-2015"></td>
       </tr>
   </table>
+  <button id="btn-avrg" class="show-avrg" type="submit"><span>Média </span></button>
+
+<div id="show-avrg" class="hide">
+    <p id="p-avrg-PER"></p>
+    <p id="p-avrg-BRA"></p>
+    <p id="p-avrg-MEX"></p>
+    <p id="p-avrg-CHL"></p>
+</div>
 </article>
+  
 `
 }
 
@@ -330,6 +387,10 @@ function showIndicadoresPop() {
           <img class="img-bra" src="img/bra.png" alt="mapa do brasil">
           <input type="checkbox" id="BRA" name="BRA">
           <label for="BRA">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Brasil</span>
           </label>
       </div>
@@ -338,6 +399,10 @@ function showIndicadoresPop() {
           <img class="img-mex" src="img/mex.png" alt="mapa do méxico">
           <input type="checkbox" id="MEX" name="MEX">
           <label for="MEX">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">México</span>
           </label>
       </div>
@@ -346,6 +411,10 @@ function showIndicadoresPop() {
          <img class="img-per" src="img/per.png" alt="mapa do perú">
           <input type="checkbox" id="PER" name="PER">
           <label for="PER">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Perú</span>
           </label>
       </div>
@@ -354,6 +423,10 @@ function showIndicadoresPop() {
           <img class="img-chi" src="img/chi.png" alt="mapa do chile">
           <input type="checkbox" id="CHL" name="CHL">
           <label for="CHL">
+          <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
+				<path d="M38 106.7c2.4 0 37.7-43 37.8-68.8 0-21-17-38-38-38C17 0 0 17 0 38c.4 27 35.4 68.7 38 68.7z" fill="#eeeeee" />
+				<ellipse fill="#AB69D5" cx="38.1" cy="38.1" rx="23.1" ry="23.1" />
+		</svg>
               <span class="label-name">Chile</span>
           </label>
       </div>
@@ -362,7 +435,7 @@ function showIndicadoresPop() {
   <form id="formIndic" action="">
   <input class="radio-indicator" type="radio" name="indicator" value="Población activa, mujeres (% de la población activa total)"> População activa, mulheres (% do total da população activa)<br>
   <input class="radio-indicator" type="radio" name="indicator" value="Población entre 15 y 64 años de edad, mujeres (% del total)"> População entre 15 e 64 anos de idade, mulheres (% do total)<br>
-  <input class="menu" id="btnEscolha" type="button" value="Explorar">
+  <button class="btnEscolha" id="btnEscolha" type="submit">Explorar</button>
   </form>
 
 
@@ -408,31 +481,13 @@ function showIndicadoresPop() {
           <td data-th="MEX-2015" id="MEX-2015"></td>
       </tr>
   </table>
+  <button id="btn-avrg" class="show-avrg" type="submit"><span>Média </span></button>
+
+<div id="show-avrg" class="hide">
+    <p id="p-avrg-PER"></p>
+    <p id="p-avrg-BRA"></p>
+    <p id="p-avrg-MEX"></p>
+    <p id="p-avrg-CHL"></p>
+</div>
 </article>
-`
-}
-
-
-// window.onload = function() {
-//   // alert("carregou");
-//   showProducts();
-// };
-
-// function getProducts(){
-//   return data["items"];
-// }
-
-// function showProducts(){
-//   let productDiv = document.getElementById('products-div');
-//   productDiv.innerHTML = `
-//   ${getProducts().map((produto) => `
-//     <div class="product-item">
-//       <img src="${produto["product"]["images"][0]}" class="product-img">
-//       <div class="text-name">
-//         <h3 class="product-name">${produto["product"]["name"]}</h3>
-//       </div>
-//       <div class="text-price">
-//         <p class="product-price">${Number(produto["product"]["price"]["value"]).toLocaleString('pt-br', {minimumFractionDigits:2, style: 'currency', currency: 'BRL'})}</p>
-//       </div>
-//     </div>`).join("")}`
-// }
+`}
