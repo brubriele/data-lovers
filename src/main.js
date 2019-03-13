@@ -411,7 +411,7 @@ function showIndicadoresViol() {
 <article>
   <h1 class="title-article">VIOLÊNCIA</h1>
   <p>Embora quase um terço de todas as mulheres tenham sofrido alguma forma de violência física ou sexual
-por parte de um parceriro (OMS 2017), em 2017, 45 países ainda não conseguiram proteger as mulheres da violência doméstica
+por parte de um parceiro (OMS 2017), em 2017, 45 países ainda não conseguiram proteger as mulheres da violência doméstica
 através de leis.</p>
   <div id="indicators-div-peru"></div>
   <div id="indicators-div-brasil"></div>
@@ -529,9 +529,9 @@ function showIndicadoresPop() {
 </div>
 <article>
   <h1 class="title-article">POPULAÇÃO</h1>
-  <p>A população é um dos mais importantes macro-indicador, necessário para construção de outros indicadores. Sua composição está
-mudando em termos de idade e distribuição geográfica. Em muitos países, o número de nascimentos de mulher diminuiu resultando em baixa
-fertilidade e o motivo de morte migrando para velhice, resultando em alta expectativa de vida.</p>
+  <p>A população é um dos mais importantes macro-indicadores, por ser necessário para construção de outros sub-indicadores. Sua composição está
+mudando em termos de idade e distribuição geográfica. Em muitos países, o número de nascimentos de meninas diminuiu, resultando em baixa
+fertilidade e o motivo de morte migrou para velhice, resultando em alta expectativa de vida.</p>
   <div id="indicators-div-peru"></div>
   <div id="indicators-div-brasil"></div>
 
