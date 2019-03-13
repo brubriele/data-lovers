@@ -298,9 +298,10 @@ function showIndicadoresEduca() {
   <thead>
       <tr class="thead">
           <th>País</th> 
-          <th>2010</th>
-          <th>2011</th>
-          <th>2012</th>
+
+          <th>2013</th>
+          <th>2014</th>
+          <th>2015</th>
       </tr>
       </thead>
       <tbody>
