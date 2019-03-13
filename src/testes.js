@@ -364,3 +364,118 @@ function sortTable() {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function printValueViol() {
+  let valor = document.getElementById("formIndic").indicator.value;
+  let selecionadoPeru = indexIndicator(basePeru, 'indicatorName', valor)
+  let escolhaPeru = WORLDBANK.PER.indicators[selecionadoPeru]
+  let checkBoxPER = document.getElementById("PER");
+  if (checkBoxBRA.checked == true) {
+    document.getElementById('BRA-nomePais').innerHTML = "Brasil"
+    document.getElementById('BRA-2013').innerHTML = "indicador não disponível no País"
+    document.getElementById('BRA-2014').innerHTML = "indicador não disponível no País"
+    document.getElementById('BRA-2015').innerHTML = "indicador não disponível no País"
+  } else if (checkBoxBRA.checked == false) {
+    document.getElementById('BRA-nomePais').innerHTML = ""
+    document.getElementById('BRA-2013').innerHTML = ""
+    document.getElementById('BRA-2014').innerHTML = ""
+    document.getElementById('BRA-2015').innerHTML = ""
+
+  }
+  if (checkBoxPER.checked == true) {
+    document.getElementById('PER-nomePais').innerHTML = "Perú"
+    document.getElementById('PER-2013').innerHTML = escolhaPeru.data["2013"]
+    document.getElementById('PER-2014').innerHTML = escolhaPeru.data["2014"]
+    document.getElementById('PER-2015').innerHTML = escolhaPeru.data["2015"]
+  } else if (checkBoxPER.checked == false) {
+    document.getElementById('PER-nomePais').innerHTML = ""
+    document.getElementById('PER-2013').innerHTML = ""
+    document.getElementById('PER-2014').innerHTML = ""
+    document.getElementById('PER-2015').innerHTML = ""
+
+  }
+  if (checkBoxMEX.checked == true) {
+    document.getElementById('MEX-nomePais').innerHTML = "México"
+    document.getElementById('MEX-2013').innerHTML = "indicador não disponível no País"
+    document.getElementById('MEX-2014').innerHTML = "indicador não disponível no País"
+    document.getElementById('MEX-2015').innerHTML = "indicador não disponível no País"
+  } else if (checkBoxMEX.checked == false) {
+    document.getElementById('MEX-nomePais').innerHTML = ""
+    document.getElementById('MEX-2013').innerHTML = ""
+    document.getElementById('MEX-2014').innerHTML = ""
+    document.getElementById('MEX-2015').innerHTML = ""
+
+  }
+  if (checkBoxCHL.checked == true) {
+    document.getElementById('CHL-nomePais').innerHTML = "Chile"
+    document.getElementById('CHL-2013').innerHTML = "indicador não disponível no País"
+    document.getElementById('CHL-2014').innerHTML = "indicador não disponível no País"
+    document.getElementById('CHL-2015').innerHTML = "indicador não disponível no País"
+  } else if (checkBoxCHL.checked == false) {
+    document.getElementById('CHL-nomePais').innerHTML = ""
+    document.getElementById('CHL-2013').innerHTML = ""
+    document.getElementById('CHL-2014').innerHTML = ""
+    document.getElementById('CHL-2015').innerHTML = ""
+
+  }
+
+  document.getElementById('btn-avrg').addEventListener('click', () => {
+ 
+    averagePeru()
+  })
+
+  function indexIndicator(array, attr, value) {
+    for (var i = 0; i < array.length; i++) {
+      if (array[i][attr] === value) {
+        return i;
+      }
+    }
+  }
+
+}
+
+
+
+
+

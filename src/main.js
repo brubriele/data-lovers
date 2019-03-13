@@ -1,7 +1,3 @@
-// window.onload = function(){
-//   listeners()
-// }
-
 document.getElementById('btn-topic-educa').addEventListener('click', () => {
   showIndicadoresEduca();
   activeClass()
@@ -19,7 +15,7 @@ document.getElementById('btn-topic-viol').addEventListener('click', () => {
 
   elements = document.getElementById("btnEscolha");
   elements.addEventListener('click', () => {
-    printValue();
+    printValueViol();
     event.preventDefault()
   })  
 })
@@ -62,6 +58,77 @@ const basePeru = WORLDBANK.PER.indicators
 const baseBrasil = WORLDBANK.BRA.indicators
 const baseMexico = WORLDBANK.MEX.indicators
 const baseChile = WORLDBANK.CHL.indicators
+
+function printValueViol() {
+  let valor = document.getElementById("formIndic").indicator.value;
+  let selecionadoPeru = indexIndicator(basePeru, 'indicatorName', valor)
+  let escolhaPeru = WORLDBANK.PER.indicators[selecionadoPeru]
+  let checkBoxPER = document.getElementById("PER");
+  if (checkBoxBRA.checked == true) {
+    document.getElementById('BRA-nomePais').innerHTML = "Brasil"
+    document.getElementById('BRA-2013').innerHTML = "indicador não disponível no País"
+    document.getElementById('BRA-2014').innerHTML = "indicador não disponível no País"
+    document.getElementById('BRA-2015').innerHTML = "indicador não disponível no País"
+  } else if (checkBoxBRA.checked == false) {
+    document.getElementById('BRA-nomePais').innerHTML = ""
+    document.getElementById('BRA-2013').innerHTML = ""
+    document.getElementById('BRA-2014').innerHTML = ""
+    document.getElementById('BRA-2015').innerHTML = ""
+
+  }
+  if (checkBoxPER.checked == true) {
+    document.getElementById('PER-nomePais').innerHTML = "Perú"
+    document.getElementById('PER-2013').innerHTML = escolhaPeru.data["2010"]
+    document.getElementById('PER-2014').innerHTML = escolhaPeru.data["2011"]
+    document.getElementById('PER-2015').innerHTML = escolhaPeru.data["2012"]
+  } else if (checkBoxPER.checked == false) {
+    document.getElementById('PER-nomePais').innerHTML = ""
+    document.getElementById('PER-2013').innerHTML = ""
+    document.getElementById('PER-2014').innerHTML = ""
+    document.getElementById('PER-2015').innerHTML = ""
+
+  }
+  if (checkBoxMEX.checked == true) {
+    document.getElementById('MEX-nomePais').innerHTML = "México"
+    document.getElementById('MEX-2013').innerHTML = "indicador não disponível no País"
+    document.getElementById('MEX-2014').innerHTML = "indicador não disponível no País"
+    document.getElementById('MEX-2015').innerHTML = "indicador não disponível no País"
+  } else if (checkBoxMEX.checked == false) {
+    document.getElementById('MEX-nomePais').innerHTML = ""
+    document.getElementById('MEX-2013').innerHTML = ""
+    document.getElementById('MEX-2014').innerHTML = ""
+    document.getElementById('MEX-2015').innerHTML = ""
+
+  }
+  if (checkBoxCHL.checked == true) {
+    document.getElementById('CHL-nomePais').innerHTML = "Chile"
+    document.getElementById('CHL-2013').innerHTML = "indicador não disponível no País"
+    document.getElementById('CHL-2014').innerHTML = "indicador não disponível no País"
+    document.getElementById('CHL-2015').innerHTML = "indicador não disponível no País"
+  } else if (checkBoxCHL.checked == false) {
+    document.getElementById('CHL-nomePais').innerHTML = ""
+    document.getElementById('CHL-2013').innerHTML = ""
+    document.getElementById('CHL-2014').innerHTML = ""
+    document.getElementById('CHL-2015').innerHTML = ""
+
+  }
+
+  document.getElementById('btn-avrg').addEventListener('click', () => {
+ 
+    averagePeru()
+  })
+
+  function indexIndicator(array, attr, value) {
+    for (var i = 0; i < array.length; i++) {
+      if (array[i][attr] === value) {
+        return i;
+      }
+    }
+  }
+
+}
+
+
 
 function printValue() {
   let valor = document.getElementById("formIndic").indicator.value;
@@ -231,9 +298,9 @@ function showIndicadoresEduca() {
   <thead>
       <tr class="thead">
           <th>País</th> 
-          <th>2013</th>
-          <th>2014</th>
-          <th>2015</th>
+          <th>2010</th>
+          <th>2011</th>
+          <th>2012</th>
       </tr>
       </thead>
       <tbody>
@@ -276,7 +343,6 @@ function showIndicadoresEduca() {
 }
 
 function showIndicadoresViol() {
-  console.log('chegou')
   let indicaDiv = document.getElementById('indicator-selection');
   indicaDiv.innerHTML = `
   <div class="box-select">
@@ -565,8 +631,9 @@ function showIndicadoresTrab() {
   </div>
 
   <form id="formIndic" action="">
-  <input class="radio-indicator" type="radio" name="indicator" value="Mujeres que creen que está justificado que un marido golpee a su esposa (cualquiera de las cinco razones) (%)"> Mulheres que acreditam que um marido tem justificativa de bater em sua esposa (qualquer uma das cinco razões*) (%)<br>
-  <input class="radio-indicator" type="radio" name="indicator" value="Proporción de mujeres víctimas de violencia física o sexual en los últimos 12 meses (% de mujeres de entre 15 y 49 años)"> Proporção de mulheres vítimas de violência física ou sexual nos últimos 12 meses (% de mulheres entre 15 e 49 anos)<br>
+  <input class="radio-indicator" type="radio" name="indicator" value="Empleadores, mujeres (% del empleo femenino)"> Empregadores, mulheres (% do emprego feminino)<br>
+  <input class="radio-indicator" type="radio" name="indicator" value="Trabajadores asalariados (empleados), mujeres (% del empleo femenino)"> Trabalhadores assalariados (empregados), mulheres (% do emprego feminino)<br>
+  <input class="radio-indicator" type="radio" name="indicator" value="Independientes, mujeres (% del empleo femenino)"> Independentes, mulheres (% do emprego feminino)<br>
   <button class="btnEscolha" id="btnEscolha" type="submit">Explorar</button>
   </form>
 
@@ -575,7 +642,7 @@ function showIndicadoresTrab() {
 
 </div>
 <article>
-  <h1 class="title-article">VIOLÊNCIA</h1>
+  <h1 class="title-article merc">MERCADO DE TRABALHO</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam sit facilis odit magnam nulla rem
       fugiat consequuntur perferendis explicabo, amet ipsa ex dolor vitae sed quasi totam, veritatis nihil?</p>
   <div id="indicators-div-peru"></div>
@@ -690,47 +757,4 @@ function activeAvrg() {
   document.getElementById('show-avrg').classList.add("visivel");
   event.preventDefault()
 }
-
-
-// continuar function
-(function(){
-  var table = document.querySelector("table"),
-      ths = table.querySelectorAll("thead"),
-      row = table.querySelectorAll("tbody"),
-      tBody = table.querySelector("tbody"),
-      docF = document.createDocumentFragment();
- 
-  function sortMe(e){
-    var thsArray = [].slice.call(ths),
-        rowArray = [].slice.call(row),
-        target = e.target,
-        thsIndex = thsArray.indexOf(target);
-    
-    rowArray.sort(function(a,b){
-      var tdA = a.children[thsIndex].textContent,
-          tdB = b.children[thsIndex].textContent;
-      
-      if (tdA > tdB){
-        return 1;
-      }else if (tdA < tdB){
-        return -1;
-      }else{
-        return 0;
-      }
-    });
-    
-    rowArray.forEach(function(row){
-      docF.appendChild(row)
-    });
-    
-    tBody.appendChild(docF);
-    
-  }
-  
-  for (var i = 0; i < ths.length; i++){
-    ths[i].addEventListener("click", sortMe, false)
-  }
-  
- 
-})()
 
