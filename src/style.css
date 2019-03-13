@@ -30,7 +30,7 @@ body, .container, .indicator-selection {
   width: 100%;
 }
 
-.thead *{
+.thead * {
   border-bottom: 1.5px solid #e5e5e5;
   letter-spacing: 0.025em;
   outline: none;

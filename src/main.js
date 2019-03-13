@@ -216,10 +216,10 @@ function showIndicadoresEduca() {
 
   <table class="rwd-table">
       <tr class="thead">
-          <th">País</th> 
-          <th">2013</th>
-          <th">2014</th>
-          <th">2015</th>
+          <th>País</th> 
+          <th>2013</th>
+          <th>2014</th>
+          <th>2015</th>
       </tr>
       <tr>
       <td id="BRA-nomePais" data-th="name-BRA"></td>
