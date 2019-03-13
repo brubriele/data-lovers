@@ -16,7 +16,7 @@
     <img class="logo" src="src/img/logo-data-lovers.png" alt="logo" />
     <ul class="listaMenu">
       <li class="menu-nav"><a class="a-nav" href="educadash.html">EDUCAÇÃO </a></li>
-      <li class="menu-nav"><a class="a-nav" href="#">VIOLÊNCIA</a></li>
+      <li class="menu-nav"><a class="a-nav" href="#">VIOLÊNCIA</a></l i>
       <li class="menu-nav"><a class="a-nav" href="#">POPULAÇÃO</a></li>
     </ul>
   </nav>
@@ -53,63 +53,80 @@
 
   <section id="topic" class="container topic-selection">
     <div class="topic-list">
-      <h3 class="section-title">DATALOVERS - The World Bank</h2>
+      <h3 class="section-title">DATALOVERS - Women In WorldBank Data Explorer</h2>
         <h4 class="section-text">Indicadores de Desenvolvimento Humano (IDH), exibido em uma guia on-line: escolha um
           tema
           para observar informações de desenvolvimento referente aos indicadores sobre mulheres entre os anos de 2013 a
-          2015.</h1>
-          <div class="topic-btn">
-            <a id="btn-topic-educa" href="#indicator-selection" class="btn-education">EDUCAÇÃO</a>
-            <a id="btn-topic-viol" href="#indicator-selection" class="btn-violence">VIOLÊNCIA</a>
-            <a id="btn-topic-pop" href="#indicator-selection" class="btn-population">POPULAÇÃO</a>
-          </div>
+          2015*.</h4>
+        <h5 class="section-text"><em>*Somente para o tópico <strong>VIOLÊNCIA</strong>, a série temporal se altera, de
+            anox - anoy, sendo que os indicadores deste grupo constam apenas para Peru na base de dados WorldBank.</em>
+        </h5>
+
+        <div class="topic-btn">
+          <a id="btn-topic-educa" href="#indicator-selection" class="btn-education">EDUCAÇÃO</a>
+          <a id="btn-topic-viol" href="#indicator-selection" class="btn-trab">VIOLÊNCIA</a>
+          <a id="btn-topic-pop" href="#indicator-selection" class="btn-population">POPULAÇÃO</a>
+          <a id="btn-topic-trab" href="#indicator-selection" class="btn-violence">MERCADO DE TRABALHO</a>
+        </div>
     </div>
   </section>
 
   <section id="indicator-selection" class="hide">
   </section>
 
-  <!-- <section class="container result indicator-selection">
 
-    <div class="box-select">
-      <div class="box-country">
-        <div class="bra">
-          <a class="btn-coun*4try bra" href="#"><img class="img-bra" src="img/bra.png" alt=""></a>
-          <p class="p-country">Brasil</p>
 
+  <section id="topic" class="container persona-selection">
+    <div class="topic-list">
+      <h3 class="section-title">PERFIL USUÁRIOS</h2>
+        <h4 class="section-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro nulla sit voluptatum
+          explicabo ullam. Eaque nemo, ipsa tempore repellendus impedit doloribus asperiores veniam? Enim tempore neque
+          ducimus corrupti maiores necessitatibus.</h4>
+
+        <div class="topic-btn">
+          <div class="persona">
+            <img src="src/img/persona-joana.png" alt="" srcset="">
+            <h1>Joana</h1>
+            <h6>
+                Pesquisadora - Área Proteção Social <br>
+                Empresa/Órgão: ONG Vamos Juntas <br>
+                Idade: 38 anos <br>
+                Educação: Ensino superior <br>
+                Mídias: Lê artigos, revistas acadêmicas, bancos de dados públicos (ex: CRAS, CEBRAP, PNUD). <br>
+                Objetivos: Correlacionar informações locais com levantamentos de IDH, isto é, dados macro, comparados a dados micro-regionais de desenvolvimento e violência.  <br>
+                Desafios: Não consegue acessar as informações de indicadores numéricos e categóricos, distribuídos por temas de forma gráfica/visual.
+  
+            </h6>
+
+          </div>
+
+          <div class="persona">
+            <img src="src/img/persona-roberto.png" alt="" srcset="">
+            <h1>Roberto</h1>
+            <h6>
+              Professor - Ciências Sociais <br>
+              Empresa/Órgão: Secretaria da Educação do Estado de São Paulo <br>
+              Idade: 27 anos <br>
+              Educação: Ensino superior <br>
+              Mídias: Livros acadêmicos, revistas, site de jornalismo de dados, portais do MEC. <br>
+              Objetivos: Planejamento de aulas, apresentar assuntos da grade curricular (violência urbana, taxa de
+              suicídio, desigualdade social, trabalho, etc) a partir de informações disponíveis em bancos de dados
+              públicos, explorando indicadores de densevolvimento humano e métricas estatísticas em sala de aula.
+              Desafios: Precisa de sites que apresentem as informações de forma clara e sintética para melhor
+              compreensão
+              e acesso dos alunos.
+
+            </h6>
+
+          </div>
         </div>
-        <div class="mex">
-          <a class="btn-country mex" href="#"><img class="img-mex" src="img/mex.png" alt=""></a>
-          <p class="p-country">México</p>
-        </div>
-
-        <div class="per">
-          <a class="btn-country per" href=""><img class="img-per" src="img/per.png" alt=""></a>
-          <p class="p-country">Perú</p>
-        </div>
-        <div class="chi">
-          <a class="btn-country chi" href=""><img class="img-chi" src="img/chi.png" alt=""></a>
-          <p class="p-country">Chile</p>
-        </div>
-      </div>
-
-      <p id="indicadorEscolhido">
-        Aqui deve aparecer o elemento criado com o valor do input radio escolhido na section/tarefa anterior
-      </p>
-
-
     </div>
-    <!-- <article>
-      <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+  </section>
 
-    </article> -->
-
-
-  <!-- </section> -->
   <div id="indicators-div">
-
   </div>
-  <!-- <div id="curve_chart" style="width: 900px; height: 500px"></div> -->
+
+
 
 
 
@@ -121,12 +138,8 @@
   <!-- <script src="./data/lol/lol.js"></script> -->
   <script src="src/main.js"></script>
   <script src="src/charts.js"></script>
-  
+
 
 </body>
 
 </html>
-
-
-
-  
