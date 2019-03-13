@@ -215,11 +215,11 @@ function showIndicadoresEduca() {
   <div id="indicators-div-brasil"></div>
 
   <table class="rwd-table">
-      <tr>
-          <th>País</th> 
-          <th>2013</th>
-          <th>2014</th>
-          <th>2015</th>
+      <tr class="thead">
+          <th">País</th> 
+          <th">2013</th>
+          <th">2014</th>
+          <th">2015</th>
       </tr>
       <tr>
       <td id="BRA-nomePais" data-th="name-BRA"></td>
@@ -332,7 +332,7 @@ function showIndicadoresViol() {
   <div id="indicators-div-brasil"></div>
 
   <table class="rwd-table">
-      <tr>
+      <tr class="thead">
           <th>País</th>
           <th>2013</th>
           <th>2014</th>
@@ -450,7 +450,7 @@ function showIndicadoresPop() {
   <div id="indicators-div-brasil"></div>
 
   <table class="rwd-table">
-      <tr>
+      <tr class="thead">
           <th>País</th>
           <th>2013</th>
           <th>2014</th>
@@ -491,6 +491,8 @@ function showIndicadoresPop() {
 </div>
 </article>
 `}
+
+
 
 function averageMexico() {
   let anoUm = parseFloat(document.getElementById("MEX-2013").innerHTML);
