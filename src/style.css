@@ -179,11 +179,17 @@ h4 {
     margin-right: 45px;
   }
 
+.persona {
+  display: flex;
+    flex-direction: column;
+    width: 26%;
+    height: 50%;
+    align-items: center;
+  
+}
 
-
-img {
-    width: 100%;
-    height: 65%;
+.persona img {
+  width: 100%
 }
 
 .box-select {
