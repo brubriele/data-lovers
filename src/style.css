@@ -23,6 +23,28 @@ body, .container, .indicator-selection {
 
 }
 
+.rwd-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.thead *{
+  border-bottom: 1.5px solid #e5e5e5;
+  letter-spacing: 0.025em;
+  outline: none;
+  padding-right: 2em;
+  text-align: left;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+}
+
+table th:hover,
+table th:focus {
+  color: #AB69D5;
+}
+
 
 
 h1, h2 {
