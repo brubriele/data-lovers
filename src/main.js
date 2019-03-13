@@ -215,12 +215,15 @@ function showIndicadoresEduca() {
   <div id="indicators-div-brasil"></div>
 
   <table class="rwd-table">
+  <thead>
       <tr class="thead">
-          <th">País</th> 
-          <th">2013</th>
-          <th">2014</th>
-          <th">2015</th>
+          <th>País</th> 
+          <th>2013</th>
+          <th>2014</th>
+          <th>2015</th>
       </tr>
+      </thead>
+      <tbody>
       <tr>
       <td id="BRA-nomePais" data-th="name-BRA"></td>
           <td data-th="BRA-2013" id="BRA-2013"></td>
@@ -245,6 +248,7 @@ function showIndicadoresEduca() {
           <td data-th="MEX-2014" id="MEX-2014"></td>
           <td data-th="MEX-2015" id="MEX-2015"></td>
       </tr>
+      </tbody>
   </table>
   <button id="btn-avrg" class="show-avrg" type="submit"><span>Média </span></button>
 
@@ -556,4 +560,47 @@ function activeAvrg() {
   document.getElementById('show-avrg').classList.add("visivel");
   event.preventDefault()
 }
+
+
+// continuar function
+(function(){
+  var table = document.querySelector("table"),
+      ths = table.querySelectorAll("thead"),
+      row = table.querySelectorAll("tbody"),
+      tBody = table.querySelector("tbody"),
+      docF = document.createDocumentFragment();
+ 
+  function sortMe(e){
+    var thsArray = [].slice.call(ths),
+        rowArray = [].slice.call(row),
+        target = e.target,
+        thsIndex = thsArray.indexOf(target);
+    
+    rowArray.sort(function(a,b){
+      var tdA = a.children[thsIndex].textContent,
+          tdB = b.children[thsIndex].textContent;
+      
+      if (tdA > tdB){
+        return 1;
+      }else if (tdA < tdB){
+        return -1;
+      }else{
+        return 0;
+      }
+    });
+    
+    rowArray.forEach(function(row){
+      docF.appendChild(row)
+    });
+    
+    tBody.appendChild(docF);
+    
+  }
+  
+  for (var i = 0; i < ths.length; i++){
+    ths[i].addEventListener("click", sortMe, false)
+  }
+  
+ 
+})()
 
