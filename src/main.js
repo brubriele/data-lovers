@@ -139,7 +139,7 @@ function showIndicadoresEduca() {
   <div class="box-country">
 
       <div class="bra">
-          <img class="img-bra" src="img/bra.png" alt="mapa do brasil">
+          <img class="img-bra" src="src/img/bra.png" alt="mapa do brasil">
           <input type="checkbox" id="BRA" name="BRA">
           <label for="BRA">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -151,7 +151,7 @@ function showIndicadoresEduca() {
       </div>
 
       <div class="mex">
-          <img class="img-mex" src="img/mex.png" alt="mapa do méxico">
+          <img class="img-mex" src="src/img/mex.png" alt="mapa do méxico">
           <input type="checkbox" id="MEX" name="MEX">
           <label for="MEX">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -163,7 +163,7 @@ function showIndicadoresEduca() {
       </div>
 
       <div class="per">
-         <img class="img-per" src="img/per.png" alt="mapa do perú">
+         <img class="img-per" src="src/img/per.png" alt="mapa do perú">
           <input type="checkbox" id="PER" name="PER">
           <label for="PER">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -175,7 +175,7 @@ function showIndicadoresEduca() {
       </div>
       
       <div class="chi">
-          <img class="img-chi" src="img/chi.png" alt="mapa do chile">
+          <img class="img-chi" src="src/img/chi.png" alt="mapa do chile">
           <input type="checkbox" id="CHL" name="CHL">
           <label for="CHL">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -266,7 +266,7 @@ function showIndicadoresViol() {
   <div class="box-country">
 
       <div class="bra">
-          <img class="img-bra" src="img/bra.png" alt="mapa do brasil">
+          <img class="img-bra" src="src/img/bra.png" alt="mapa do brasil">
           <input type="checkbox" id="BRA" name="BRA">
           <label for="BRA">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -278,7 +278,7 @@ function showIndicadoresViol() {
       </div>
 
       <div class="mex">
-          <img class="img-mex" src="img/mex.png" alt="mapa do méxico">
+          <img class="img-mex" src="src/img/mex.png" alt="mapa do méxico">
           <input type="checkbox" id="MEX" name="MEX">
           <label for="MEX">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -290,7 +290,7 @@ function showIndicadoresViol() {
       </div>
 
       <div class="per">
-         <img class="img-per" src="img/per.png" alt="mapa do perú">
+         <img class="img-per" src="src/img/per.png" alt="mapa do perú">
           <input type="checkbox" id="PER" name="PER">
           <label for="PER">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -302,7 +302,7 @@ function showIndicadoresViol() {
       </div>
       
       <div class="chi">
-          <img class="img-chi" src="img/chi.png" alt="mapa do chile">
+          <img class="img-chi" src="src/img/chi.png" alt="mapa do chile">
           <input type="checkbox" id="CHL" name="CHL">
           <label for="CHL">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -384,7 +384,7 @@ function showIndicadoresPop() {
   <div class="box-country">
 
       <div class="bra">
-          <img class="img-bra" src="img/bra.png" alt="mapa do brasil">
+          <img class="img-bra" src="src/img/bra.png" alt="mapa do brasil">
           <input type="checkbox" id="BRA" name="BRA">
           <label for="BRA">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -396,7 +396,7 @@ function showIndicadoresPop() {
       </div>
 
       <div class="mex">
-          <img class="img-mex" src="img/mex.png" alt="mapa do méxico">
+          <img class="img-mex" src="src/img/mex.png" alt="mapa do méxico">
           <input type="checkbox" id="MEX" name="MEX">
           <label for="MEX">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -408,7 +408,7 @@ function showIndicadoresPop() {
       </div>
 
       <div class="per">
-         <img class="img-per" src="img/per.png" alt="mapa do perú">
+         <img class="img-per" src="src/img/per.png" alt="mapa do perú">
           <input type="checkbox" id="PER" name="PER">
           <label for="PER">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -420,7 +420,7 @@ function showIndicadoresPop() {
       </div>
       
       <div class="chi">
-          <img class="img-chi" src="img/chi.png" alt="mapa do chile">
+          <img class="img-chi" src="src/img/chi.png" alt="mapa do chile">
           <input type="checkbox" id="CHL" name="CHL">
           <label for="CHL">
           <svg class="pin" width="26" height="57" viewBox="0 0 76 107" xmlns="http://www.w3.org/2000/svg">
@@ -443,7 +443,7 @@ function showIndicadoresPop() {
 
 </div>
 <article>
-  <h1 class="title-article">EDUCAÇÃO</h1>
+  <h1 class="title-article">POPULAÇÃO</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam sit facilis odit magnam nulla rem
       fugiat consequuntur perferendis explicabo, amet ipsa ex dolor vitae sed quasi totam, veritatis nihil?</p>
   <div id="indicators-div-peru"></div>
