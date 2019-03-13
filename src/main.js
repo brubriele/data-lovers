@@ -289,8 +289,8 @@ function showIndicadoresEduca() {
 </div>
 <article>
   <h1 class="title-article">EDUCAÇÃO</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam sit facilis odit magnam nulla rem
-      fugiat consequuntur perferendis explicabo, amet ipsa ex dolor vitae sed quasi totam, veritatis nihil?</p>
+  <p>Prioridade estratégica de desenvolvimento, os indicadores mostram que o acesso a educação impacta na vida das mulheres em termos
+de saúde, participação no mercado de trabalho formal e renda.</p>
   <div id="indicators-div-peru"></div>
   <div id="indicators-div-brasil"></div>
 
@@ -410,8 +410,9 @@ function showIndicadoresViol() {
 </div>
 <article>
   <h1 class="title-article">VIOLÊNCIA</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam sit facilis odit magnam nulla rem
-      fugiat consequuntur perferendis explicabo, amet ipsa ex dolor vitae sed quasi totam, veritatis nihil?</p>
+  <p>Embora quase um terço de todas as mulheres tenham sofrido alguma forma de violência física ou sexual
+por parte de um parceriro (OMS 2017), em 2017, 45 países ainda não conseguiram proteger as mulheres da violência doméstica
+através de leis.</p>
   <div id="indicators-div-peru"></div>
   <div id="indicators-div-brasil"></div>
 
@@ -528,8 +529,9 @@ function showIndicadoresPop() {
 </div>
 <article>
   <h1 class="title-article">POPULAÇÃO</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam sit facilis odit magnam nulla rem
-      fugiat consequuntur perferendis explicabo, amet ipsa ex dolor vitae sed quasi totam, veritatis nihil?</p>
+  <p>A população é um dos mais importantes macro-indicador, necessário para construção de outros indicadores. Sua composição está
+mudando em termos de idade e distribuição geográfica. Em muitos países, o número de nascimentos de mulher diminuiu resultando em baixa
+fertilidade e o motivo de morte migrando para velhice, resultando em alta expectativa de vida.</p>
   <div id="indicators-div-peru"></div>
   <div id="indicators-div-brasil"></div>
 
@@ -644,8 +646,8 @@ function showIndicadoresTrab() {
 </div>
 <article>
   <h1 class="title-article merc">MERCADO DE TRABALHO</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam sit facilis odit magnam nulla rem
-      fugiat consequuntur perferendis explicabo, amet ipsa ex dolor vitae sed quasi totam, veritatis nihil?</p>
+  <p>Os indicadores mostram a representatividade das mulheres no mercado de trabalho, em termos de mulheres empregadoras, assalariadas 
+e independentes.</p>
   <div id="indicators-div-peru"></div>
   <div id="indicators-div-brasil"></div>
 
