@@ -156,7 +156,7 @@ h4 {
   }
   
 
-  .btn-violence, .btn-education, .btn-population {
+  .btn-violence, .btn-education, .btn-population, .btn-trab {
     background-color: #4B4A47;
     border-radius: 145px;
     width: 210px;
@@ -300,7 +300,7 @@ nav {
         grid-row: 1 / span 2;
         grid-column: 1 / span 1;
       }
-      .dashboard-card, .btn-education, .btn-violence, .btn-population {
+      .dashboard-card, .btn-education, .btn-violence, .btn-population, .btn-trab {
         background: white;
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
         padding: 2px;
@@ -314,7 +314,7 @@ nav {
         border-radius: 2px;
       }
 
-      .topic-btn, .btn-education, .btn-violence, .btn-population  {
+      .topic-btn, .btn-education, .btn-violence, .btn-population, .btn-trab {
           display: flex;
           color: #242A36;
           justify-content: center;
@@ -323,7 +323,7 @@ nav {
           
       }
 
-      .btn-education:hover, .btn-violence:hover, .btn-population:hover {
+      .btn-education:hover, .btn-violence:hover, .btn-population:hover, .btn-trab:hover {
         background: rgb(255, 255, 255);
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
 
